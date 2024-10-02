@@ -13,4 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route ::get('dashboard', [App\Http\Controllers\landingPageController::class,'index']);
+Route ::get('dashboard', [App\Http\Controllers\landingPageController::class,'index']);use App\Http\Controllers\BimbinganController;
+
+Route::get('/bimbingan', [BimbinganController::class, 'index'])->name('bimbingan.index');
+Route::get('/bimbingan/create', [BimbinganController::class, 'create'])->name('bimbingan.create');
+Route::post('/bimbingan', [BimbinganController::class, 'store'])->name('bimbingan.store');
