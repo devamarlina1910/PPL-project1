@@ -16,6 +16,7 @@
                 <input type="text" class="form-control" id="mahasiswa" name="mahasiswa" required>
             </div>
             <div class="mb-3">
+                <label for="
                 <label for="nim" class="form-label">NIM</label>
                 <input type="number" class="form-control" id="nim" name="nim" required>
             </div>

@@ -6,31 +6,21 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateBimbinganTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('bimbingan', function (Blueprint $table) {
             $table->id();
-            $table->string('mahasiswa');           // Tipe data string
-            $table->integer('nim');                // Tipe data number
-            $table->enum('status', ['belum mulai', 'proses', 'selesai']); // Tipe data enum
-            $table->date('tanggal_bimbingan');     // Tipe data date
-            $table->boolean('aktif');              // Tipe data boolean
+            $table->string('mahasiswa'); // Pastikan kolom ini ada
+            $table->integer('nim');
+            $table->enum('status', ['belum mulai', 'proses', 'selesai']);
+            $table->date('tanggal_bimbingan');
+            $table->boolean('aktif');
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
-        Schema::dropIfExists('bimbingan');
+        Schema::dropIfExists('bimbingan'); // Gunakan huruf kecil
     }
 }

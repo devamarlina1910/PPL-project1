@@ -9,13 +9,12 @@ class Bimbingan extends Model
 {
     use HasFactory;
 
-    protected $table = 'bimbingan';
-
+    protected $table = 'Bimbingan';
     protected $fillable = [
         'mahasiswa',
         'nim',
         'status',
         'tanggal_bimbingan',
-        'aktif'
+        'aktif',
     ];
 }
