@@ -9,7 +9,7 @@ class Bimbingan extends Model
 {
     use HasFactory;
 
-    protected $table = 'Bimbingan';
+    protected $table = 'bimbingan'; // Pastikan nama tabel dalam huruf kecil
     protected $fillable = [
         'mahasiswa',
         'nim',
@@ -17,4 +17,9 @@ class Bimbingan extends Model
         'tanggal_bimbingan',
         'aktif',
     ];
+
+    public function mahasiswas() // Menggunakan plural untuk mencerminkan relasi
+    {
+        return $this->hasMany(Mahasiswa::class, 'bimbingan_id'); // Pastikan relasi benar
+    }
 }

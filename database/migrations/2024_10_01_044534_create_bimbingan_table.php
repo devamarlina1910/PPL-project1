@@ -10,7 +10,7 @@ class CreateBimbinganTable extends Migration
     {
         Schema::create('bimbingan', function (Blueprint $table) {
             $table->id();
-            $table->string('mahasiswa'); // Pastikan kolom ini ada
+            $table->string('mahasiswa');
             $table->integer('nim');
             $table->enum('status', ['belum mulai', 'proses', 'selesai']);
             $table->date('tanggal_bimbingan');
@@ -21,6 +21,6 @@ class CreateBimbinganTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('bimbingan'); // Gunakan huruf kecil
+        Schema::dropIfExists('bimbingan');
     }
 }

@@ -2,8 +2,10 @@
 
 namespace Database\Seeders;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Mahasiswa;
+use App\Models\Bimbingan;
 use Illuminate\Database\Seeder;
+use Carbon\Carbon;
 
 class DatabaseSeeder extends Seeder
 {
@@ -12,11 +14,34 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+        // Membuat Bimbingan
+        $bimbingan1 = Bimbingan::create([
+            'mahasiswa' => 'jungwon',
+            'nim' => 9,
+            'status' => 'belum mulai',
+            'tanggal_bimbingan' => Carbon::now(),
+            'aktif' => 1
+        ]);
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        $bimbingan2 = Bimbingan::create([
+            'mahasiswa' => 'Heeseung',
+            'nim' => 15,
+            'status' => 'proses',
+            'tanggal_bimbingan' => Carbon::now(),
+            'aktif' => 1
+        ]);
+
+        // Membuat Mahasiswa
+        Mahasiswa::create([
+            'bimbingan_id' => $bimbingan1->id,
+            'jumlah_mahasiswa' => 1,
+            'tanggal_bimbingan' => Carbon::now()
+        ]);
+
+        Mahasiswa::create([
+            'bimbingan_id' => $bimbingan2->id,
+            'jumlah_mahasiswa' => 1,
+            'tanggal_bimbingan' => Carbon::now()
+        ]);
     }
 }

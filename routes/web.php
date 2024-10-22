@@ -11,3 +11,4 @@ Route::post('/bimbingan', [BimbinganController::class, 'store'])->name('bimbinga
 Route::get('/bimbingan/{id}/edit', [BimbinganController::class, 'edit'])->name('bimbingan.edit');
 Route::put('/bimbingan/{id}', [BimbinganController::class, 'update'])->name('bimbingan.update');
 Route::delete('/bimbingan/{id}', [BimbinganController::class, 'destroy'])->name('bimbingan.destroy');
+Route::get('/bimbingan/{id}', [BimbinganController::class, 'show'])->name('bimbingan.show');
