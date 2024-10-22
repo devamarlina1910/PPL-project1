@@ -30,6 +30,41 @@ class DatabaseSeeder extends Seeder
             'tanggal_bimbingan' => Carbon::now(),
             'aktif' => 1
         ]);
+        $bimbingan2 = Bimbingan::create([
+            'mahasiswa' => 'Sunghoon',
+            'nim' => 8,
+            'status' => 'proses',
+            'tanggal_bimbingan' => Carbon::now(),
+            'aktif' => 1
+        ]);
+        $bimbingan2 = Bimbingan::create([
+            'mahasiswa' => 'Jay',
+            'nim' => 20,
+            'status' => 'proses',
+            'tanggal_bimbingan' => Carbon::now(),
+            'aktif' => 1
+        ]);
+        $bimbingan2 = Bimbingan::create([
+            'mahasiswa' => 'Jake',
+            'nim' => 15,
+            'status' => 'proses',
+            'tanggal_bimbingan' => Carbon::now(),
+            'aktif' => 1
+        ]);
+        $bimbingan2 = Bimbingan::create([
+            'mahasiswa' => 'Sunoo',
+            'nim' => 24,
+            'status' => 'proses',
+            'tanggal_bimbingan' => Carbon::now(),
+            'aktif' => 1
+        ]);
+        $bimbingan2 = Bimbingan::create([
+            'mahasiswa' => 'Niki',
+            'nim' => 9,
+            'status' => 'proses',
+            'tanggal_bimbingan' => Carbon::now(),
+            'aktif' => 1
+        ]);
 
         // Membuat Mahasiswa
         Mahasiswa::create([
